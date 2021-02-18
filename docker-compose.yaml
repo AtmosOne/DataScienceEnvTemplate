@@ -2,7 +2,7 @@ version: '3'
 services:
 
   jupyter-notebook:
-    image: jupyter_notebook_base:dark
+    image: atmosphere4u/jupyter-notebook-environments:dark
     ports:
       - 5000:5000
     volumes:
