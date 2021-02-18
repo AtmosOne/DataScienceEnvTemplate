@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  jupyter-notebook:
+    image: jupyter_notebook_base:dark
+    ports:
+      - 5000:5000
+    volumes:
+      - ./notebooks:/notebooks
+      - ./data:/data
+      - ./models:/models
+      - ./scripts/jupyter-startup.sh:/jupyter-startup.sh
+    network_mode: host
+    command: bash -c "source jupyter-startup.sh"
+    restart: always

@@ -1,0 +1,1 @@
+jupyter-notebook --no-browser --allow-root --ip 0.0.0.0 --NotebookApp.password=sha1:2793a9ae71cc:35ce7d59ce1a1ca267668c24764997fe4ad8bc35;
