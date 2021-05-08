@@ -1,15 +1,16 @@
 version: '3'
 services:
 
-  jupyter-notebook:
-    image: atmosphere4u/jupyter-notebook-environments:dark
+  jupyter-server:
+    build:
+      context: ./Docker
+      dockerfile: Dockerfile
+      args:
+        JUPYTER_PASSWORD_SHA1: sha1:8a02ab3be900:a4d5f1243ea9df717d0488d059026b7fded17880
     ports:
-      - 5000:5000
+      - 8889:8888
     volumes:
-      - ./notebooks:/notebooks
-      - ./data:/data
-      - ./models:/models
-      - ./scripts/jupyter-startup.sh:/jupyter-startup.sh
-    network_mode: host
-    command: bash -c "source jupyter-startup.sh"
+      - ./notebooks:/jupyter_env_dir/notebooks
+      - ./data:/jupyter_env_dir/data
+      - ./models:/jupyter_env_dir/models
     restart: always

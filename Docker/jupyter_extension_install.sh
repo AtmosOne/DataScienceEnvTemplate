@@ -12,9 +12,3 @@ jupyter nbextension enable --py widgetsnbextension
 jupyter nbextension enable spellchecker/main
 jupyter nbextension enable varInspector/main
 jupyter nbextension enable toggle_all_line_numbers/main
-
-# dark
-jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
-
-# light
-# jt -t grade3 -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T

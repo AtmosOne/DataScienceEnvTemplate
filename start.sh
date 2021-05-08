@@ -1,1 +1,1 @@
-sudo docker-compose -f docker-compose.yaml up -d;
+sudo docker-compose -f docker-compose.yaml up --build -d;
