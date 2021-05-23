@@ -24,14 +24,11 @@ jobs:
     - name: Building image from default Docker file
       run: bash -c "source Docker/build_docker_image.sh"
 
-    # - name: Starting docker container
-    #   run: bash -c "source start_env.sh"
+    - name: Starting docker container
+      run: bash -c "source start_env.sh"
     
     - name: Pause to ensure container spin up
       run: bash -c "sleep 5"
-
-    - name: Check if container is running
-      run: bash -c "docker ps"
 
     - name: Check if container is running
       run: bash -c "source Docker/check_if_container_running.sh"
