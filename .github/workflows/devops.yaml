@@ -30,5 +30,8 @@ jobs:
     - name: Pause to ensure container spin up
       run: bash -c "sleep 5"
 
+    - name: List containers running
+      run: bash -c "docker ps"
+
     - name: Check if container is running
       run: bash -c "source Docker/check_if_container_running.sh"
