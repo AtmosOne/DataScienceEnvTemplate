@@ -12,3 +12,4 @@ jupyter nbextension enable --py widgetsnbextension
 jupyter nbextension enable spellchecker/main
 jupyter nbextension enable varInspector/main
 jupyter nbextension enable toggle_all_line_numbers/main
+jupyter nbextension enable hinterland/hinterland
