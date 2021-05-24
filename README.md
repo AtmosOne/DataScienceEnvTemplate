@@ -1,12 +1,12 @@
-# DataScienceEnvTemplate
+# ML_ENVIRONMENT
 
-This is template environment for data science projects
+This is template environment for data science and machine learning projects
 
 ## How to manage
 
-1. `source start.sh`: starts jupyter
-2. `source stop.sh`: stops jupyter
-3. `source restart.sh`: restarts jupyter
+1. `source start_env.sh`: starts jupyter
+2. `source stop_env.sh`: stops jupyter
+3. `source restart_env.sh`: restarts jupyter
 
 ## Extensions activated out of the box
 
@@ -17,3 +17,4 @@ This is template environment for data science projects
 * spellchecker/main
 * varInspector/main
 * toggle_all_line_numbers/main
+* hinterland
