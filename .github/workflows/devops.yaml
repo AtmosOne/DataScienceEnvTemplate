@@ -34,4 +34,4 @@ jobs:
       run: bash -c "docker ps"
 
     - name: Check if container is running
-      run: bash -c "source Docker/check_if_container_running.sh"
+      run: bash -c "source docker/check_if_container_running.sh"
