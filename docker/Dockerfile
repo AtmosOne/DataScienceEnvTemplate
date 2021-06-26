@@ -1,4 +1,4 @@
-FROM python:3.9.5
+FROM python:3.9.5-slim
 
 
 ARG JUPYTER_PASSWORD_SHA1
@@ -11,16 +11,17 @@ LABEL MAINTAINER "Adil Rashitov adil.rashitov.98@gmail.com"
 # 1. Copy inputs
 COPY ./requirements.txt /
 COPY ./jupyter_extension_install.sh ./jupyter_extension_install.sh
+COPY ./dependencies_installation_script.sh ./dependencies_installation_script.sh
 
 # 2. Installation of dependencies
 RUN apt-get update \
-    && pip3 install --upgrade pip \
-    && pip3 install wheel \
-    && pip3 install -r /requirements.txt \
-    && pip3 install git+https://github.com/AtmosOne/S3SDK.git \
+    && apt-get install -y git \
+    && sh dependencies_installation_script.sh \
     && sh jupyter_extension_install.sh \
     && rm /requirements.txt \
-    && rm -rf jupyter_extension_install.sh
+    && rm -rf jupyter_extension_install.sh \
+    && rm -rf dependencies_installation_script.sh \
+    && rm -rf requirements.txt
     
 # 3. Entrypoint
 ENTRYPOINT jupyter-notebook \
