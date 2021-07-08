@@ -23,6 +23,7 @@ entrypoints==0.3
 et-xmlfile==1.1.0
 Fiona==1.8.19
 flake8==3.9.2
+fuzzywuzzy==0.18.0
 GeoAlchemy2==0.9.0
 geopandas==0.9.0
 greenlet==1.1.0
